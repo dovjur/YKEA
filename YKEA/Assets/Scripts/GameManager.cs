@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        BuildingManager.furnituresInScene = new List<GameObject>();
         if (!string.IsNullOrEmpty(SelectRoom.loadName))
         {
             OnLoad(SelectRoom.loadName);

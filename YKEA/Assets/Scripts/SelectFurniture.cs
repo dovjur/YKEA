@@ -90,7 +90,6 @@ public class SelectFurniture : MonoBehaviour
     {
         GameObject objToDestroy = selectedFurniture.transform.parent.gameObject;
         BuildingManager.furnituresInScene.Remove(objToDestroy);
-        Debug.Log(BuildingManager.furnituresInScene.Count);
         Deselect();
         commandManager.ExecuteCommand(new DeleteCommand(objToDestroy));
     }
